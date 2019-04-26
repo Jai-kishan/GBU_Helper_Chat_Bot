@@ -1,7 +1,12 @@
+#Flask is a Python web framework.Flask can be used for building complex , database-driven websites,starting with mostly static pages.
+#Requests is a python module that you can use to send all kinds of HTTP requests
+#The jsonify() function in flask returns a flask.Response()
 from flask import Flask,jsonify,request
+#The jsonify() function in flask returns a flask.Response()
 import json, os.path,datetime
-
-app=Flask(__name__)x
+#The JSON module is mainly used to convert the python dictionary above into a JSON string that can be written into a file.
+#The OS module in python provides functions for interacting with the operating system.
+app=Flask(__name__)
 
 #for greeting first step
 @app.route("/api/chat_bot/<Email_Id>",methods=['POST'])
