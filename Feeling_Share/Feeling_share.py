@@ -15,10 +15,11 @@ def post_data(Email_Id):
 	now=datetime.datetime.now()
 	localtime=(now.strftime("%x"))
 	if os.path.isfile("feeling_share.json"):
+		#The best way to do this is using the withstatement its work for file handling.
+		#This ensures that the file is closed when the block inside with is exited.
 		with open("feeling_share.json") as file:
 			read_file=file.read()
 			file_store=json.loads(read_file)
-
 		newfeeling={
 		"Name":request.json["Name"],
 		"Feeling":request.json["Feeling"]
@@ -39,6 +40,7 @@ def post_data(Email_Id):
 		return jsonify(newfeeling)
 	return jsonify({"Errors":"No file"})
 
+#make a new routes
 @app.route("/api/chat_bot/<Email_Id>",methods=['GET'])
 def get_data(Email_Id):
 	with open("feeling_share.json") as file:
