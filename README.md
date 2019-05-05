@@ -6,7 +6,7 @@ so firstly we need install pip
 
 ### pip 
 
-** python2 **
+**python2**
 ```
 sudo apt install python-pip
 ```
@@ -20,7 +20,7 @@ if you need to upgrade your pip version so you can try this:-
 pip install --upgrade pip
 ```
 
-** python 3 **
+**python 3**
 ```
 sudo apt install python3-pip
 ```
